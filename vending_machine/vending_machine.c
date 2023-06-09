@@ -22,6 +22,8 @@ int main()
     float cost;
     while(scanf("%d %.3f", &index, &cost) == 2)
     {
-        
+
     }
+
+    // EOF case
 }
