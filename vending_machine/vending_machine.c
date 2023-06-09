@@ -84,6 +84,11 @@ void set_items(Item array[])
 void print_sold(int ind, float amt, Item array[])
 {
     static float money_made = 0;
+    if (array[ind].num_left == 0)
+    {
+        printf("No %s left! Try another item\n", array[ind].item);
+        return;
+    }
     array[ind].num_left--;
     money_made += array[ind].price;
     printf("%s is dispensed and $%.2f returned\n", array[ind].item, amt - array[ind].price);
