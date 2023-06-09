@@ -19,5 +19,9 @@ int main()
     set_items(arr);
     // Print current status
     int index;
-    while(scanf("%d %.3f", &index))
+    float cost;
+    while(scanf("%d %.3f", &index, &cost) == 2)
+    {
+        
+    }
 }
