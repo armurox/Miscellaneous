@@ -23,7 +23,8 @@ int main()
     float paid;
 
     // Error handling
-    while (scanf("%d %.3f", &index, &paid) == 2)
+    int num_read= scanf("%d %.3f", &index, &paid);
+    while (num_red == 2)
     {
         if (paid < 0 || index < 0)
         {
@@ -44,7 +45,14 @@ int main()
         }
 
         print_sold_items(index, paid);
+        num_read = scanf("%d %.3f", &index, &paid);
 
+    }
+    
+    if (num_read == EOF)
+    {
+        printf("Thanks for your patronage\n");
+        return 0;
     }
     
     // Missing inputs
@@ -65,5 +73,5 @@ void set_items(Item array[])
 
 void print_sold_items(int index, int paid)
 {
-    
+
 }
