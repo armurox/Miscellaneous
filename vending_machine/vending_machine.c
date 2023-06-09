@@ -15,7 +15,7 @@ int main()
 {
     // Print welcome message to user
     printf("Welcome to the Vending Machine!\n");
-    printf("Enter your choice by # and input case amount, repeatedly (^d to end).\n");
+    printf("Enter your choice by # and input the amount you want to pay (note that only 1 item can be purchased per money put in), repeatedly (^d to end).\n");
     
     Item arr[NUM_ITEMS];
     set_items(arr);
