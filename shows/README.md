@@ -1,0 +1,1 @@
+A web application that rapidly loads movies from IMDB's database (a local copy of it) as the user types the query. Mainly for Ajax practise.
