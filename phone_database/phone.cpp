@@ -53,7 +53,7 @@ int main()
                 cout << "Invalid command, try again\n";
                 break;
         }
-
+        cout << "Info: Please enter a command\n";
         cin >> command;
     }
 
