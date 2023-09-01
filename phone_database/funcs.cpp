@@ -42,14 +42,31 @@ void l_command(map<string, phone_nums> &db)
 {
     for (map<string, phone_nums>::iterator it = db.begin(), n = db.end(); it != n; ++it)
     {
-        cout << it -> first << "\n";
+        cout << "Result: " << it -> first << "\n";
     }
 }
 
 void p_command(map<string, phone_nums> &db)
 {
-    // TODO
-    return;
+     string lastname, firstname;
+    cin >> lastname >> firstname;
+    map<string, phone_nums>::iterator it = db.find(lastname + "," + firstname);
+    if (it != db.end())
+    {
+        for (phone_nums::iterator it_2 = (it -> second).begin(), n = (it -> second).end(); it_2 != n; ++it_2)
+        {
+            if (it_2 -> second != "")
+            {
+                cout << "Result: " << it_2 -> first << "," << it_2 -> second << "\n";
+            }
+            
+        }
+    }
+
+    else
+    {
+        cout << "Contact not found\n";
+    }
 }
 
 void n_command(map<string, phone_nums> &db)
