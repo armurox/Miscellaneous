@@ -48,7 +48,13 @@ int main()
             case 'R':
                 r_command(phone_db);
                 break;
+            
+            default:
+                cout << "Invalid command, try again\n";
+                break;
         }
+
+        cin >> command;
     }
 
     cout << "Info: Thank you for using the phone database!" << endl;

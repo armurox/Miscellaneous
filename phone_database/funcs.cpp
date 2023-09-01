@@ -18,6 +18,7 @@ void c_command(map<string, phone_nums> &db)
     else
     {
         db[lastname + "," + firstname] = {{"HOME", ""}, {"CELL", ""}, {"WORK", ""}, {"FAX", ""}, {"VOIP", ""}};
+        cout << "Contact Created\n";
     }
 }
 
@@ -27,42 +28,51 @@ void d_command(map<string, phone_nums> &db)
     cin >> lastname >> firstname;
     if (db.find(lastname + "," + firstname) != db.end())
     {
-        cout << "Contact not found\n";
+        db.erase(lastname + "," + firstname);
+        cout << "Contact Deleted\n";
     }
 
     else
     {
-        db.erase(lastname + "," + firstname);
+        cout << "Contact not found\n";
     }
 }
 
 void l_command(map<string, phone_nums> &db)
 {
-    return;
+    for (map<string, phone_nums>::iterator it = db.begin(), n = db.end(); it != n; ++it)
+    {
+        cout << it -> first << "\n";
+    }
 }
 
 void p_command(map<string, phone_nums> &db)
 {
+    // TODO
     return;
 }
 
 void n_command(map<string, phone_nums> &db)
 {
+    // TODO
     return;
 }
 
 void x_command(map<string, phone_nums> &db)
 {
+    // TODO
     return;
 }
 
 void s_command(map<string, phone_nums> &db)
 {
+    // TODO
     return;
 }
 
 void r_command(map<string, phone_nums> &db)
 {
+    // TODO
     return;
 }
 
