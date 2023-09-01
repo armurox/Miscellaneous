@@ -21,7 +21,7 @@ void c_command(map<string, phone_nums> &db)
     }
 }
 
-void l_command(map<string, phone_nums> &db)
+void d_command(map<string, phone_nums> &db)
 {
     string lastname, firstname;
     cin >> lastname >> firstname;
@@ -36,7 +36,7 @@ void l_command(map<string, phone_nums> &db)
     }
 }
 
-void d_command(map<string, phone_nums> &db)
+void l_command(map<string, phone_nums> &db)
 {
     return;
 }
