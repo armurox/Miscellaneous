@@ -48,7 +48,7 @@ void l_command(map<string, phone_nums> &db)
 
 void p_command(map<string, phone_nums> &db)
 {
-     string lastname, firstname;
+    string lastname, firstname;
     cin >> lastname >> firstname;
     map<string, phone_nums>::iterator it = db.find(lastname + "," + firstname);
     if (it != db.end())
@@ -71,8 +71,36 @@ void p_command(map<string, phone_nums> &db)
 
 void n_command(map<string, phone_nums> &db)
 {
-    // TODO
-    return;
+    string lastname, firstname;
+    cin >> lastname >> firstname;
+    if (db.find(lastname + "," + firstname) == db.end())
+    {
+        cout << "Contact not found\n";
+        return;
+    }
+
+    string type;
+    string phone_num;
+    cin >> type;
+    cin >> phone_num;
+    if (db[lastname + "," + firstname].find(type) == db[lastname + "," + firstname].end())
+    {
+        cout << "Invalid phone number type" << endl;
+        return;
+    }
+
+    if (db[lastname + "," + firstname][type] == "")
+    {
+        db[lastname + "," + firstname][type] = phone_num;
+        cout << "Phone number added" << endl;
+    }
+
+    else
+    {
+        db[lastname + "," + firstname][type] = phone_num;
+        cout << "Phone number replaced" << endl;
+    }
+    
 }
 
 void x_command(map<string, phone_nums> &db)
