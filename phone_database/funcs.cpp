@@ -92,13 +92,13 @@ void n_command(map<string, phone_nums> &db)
     if (db[lastname + "," + firstname][type] == "")
     {
         db[lastname + "," + firstname][type] = phone_num;
-        cout << "Phone number added" << endl;
+        cout << "Phone number added\n";
     }
 
     else
     {
         db[lastname + "," + firstname][type] = phone_num;
-        cout << "Phone number replaced" << endl;
+        cout << "Phone number replaced\n";
     }
     
 }
