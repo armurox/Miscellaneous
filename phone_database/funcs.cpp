@@ -85,7 +85,7 @@ void n_command(map<string, phone_nums> &db)
     cin >> phone_num;
     if (db[lastname + "," + firstname].find(type) == db[lastname + "," + firstname].end())
     {
-        cout << "Invalid phone number type" << endl;
+        cout << "Invalid phone number type\n";
         return;
     }
 
