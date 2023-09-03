@@ -114,7 +114,6 @@ void x_command(map<string, phone_nums> &db)
     }
 
     string type;
-    string phone_num;
     cin >> type;
     if (db[lastname + "," + firstname].find(type) == db[lastname + "," + firstname].end())
     {
