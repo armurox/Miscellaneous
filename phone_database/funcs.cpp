@@ -105,8 +105,32 @@ void n_command(map<string, phone_nums> &db)
 
 void x_command(map<string, phone_nums> &db)
 {
-    // TODO
-    return;
+    string lastname, firstname;
+    cin >> lastname >> firstname;
+    if (db.find(lastname + "," + firstname) == db.end())
+    {
+        cout << "Contact not found\n";
+        return;
+    }
+
+    string type;
+    string phone_num;
+    cin >> type;
+    if (db[lastname + "," + firstname].find(type) == db[lastname + "," + firstname].end())
+    {
+        cout << "No phone number of that type" << endl;
+        return;
+    }
+
+    if (db[lastname + "," + firstname][type] == "")
+    {
+        cout << "No phone number of that type\n";
+        return;
+    }
+
+    db[lastname + "," + firstname][type] = "";
+    cout << "Phone number deleted\n";
+
 }
 
 void s_command(map<string, phone_nums> &db)
